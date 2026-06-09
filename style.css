@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agro Forte</title>
+
+<style>
+
+/* =========================
+   BASE
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial;
+    background:#f5f7f5;
+    color:#222;
+    transition:.3s;
+    padding:10px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:linear-gradient(135deg,#1b5e20,#43a047);
+    color:white;
+    text-align:center;
+    padding:2rem;
+    border-radius:10px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+nav{
+    background:#1b5e20;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:15px;
+    margin-top:10px;
+    border-radius:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner{
+    min-height:60vh;
+    margin-top:10px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-align:center;
+
+    border-radius:10px;
+}
+
+.banner-texto{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:12px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+button{
+    padding:12px 16px;
+    border:none;
+    border-radius:8px;
+    background:#43a047;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+/* =========================
+   BOTÕES DE SEÇÃO
+========================= */
+
+.botoes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0;
+}
+
+.botao-secao{
+    background:#2e7d32;
+    font-weight:bold;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao{
+    max-width:900px;
+    margin:40px auto;
+    text-align:center;
+    padding:20px;
+}
+
+.secao h2{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+/* =========================
+   ACESSIBILIDADE
+========================= */
+
+.acessibilidade{
+    position:fixed;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+
+    background:white;
+    padding:12px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark nav,
+.dark header{
+    background:#0a1f0b;
+}
+
+.dark .banner-texto{
+    background:rgba(0,0,0,.7);
+}
+
+.dark .secao{
+    color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Agro Forte</h1>
+    <p>Futuro Sustentável para o Campo</p>
+</header>
+
+<!-- MENU -->
+<nav>
+    <a href="#inicio" class="menu-link">Início</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#sustentabilidade">Sustentabilidade</a>
+    <a href="#produtividade">Produtividade</a>
+</nav>
+
+<!-- BANNER -->
+<section class="banner" id="inicio">
+
+    <div class="banner-texto">
+
+        <h2>O Futuro do Agro é Sustentável</h2>
+
+        <p>Inovação, tecnologia e respeito ao meio ambiente.</p>
+
+        <button id="btnSaibaMais">Saiba Mais</button>
+
+        <div id="mensagem"></div>
+
+        <button id="lerPagina">🔊 Ler minha página</button>
+        <button id="pararLeitura">⏹ Parar leitura</button>
+
+    </div>
+
+</section>
+
+<!-- BOTÕES -->
+<div class="botoes">
+
+    <button class="botao-secao" data-target="tecnologia">🚜 Tecnologia</button>
+    <button class="botao-secao" data-target="sustentabilidade">🌱 Sustentabilidade</button>
+    <button class="botao-secao" data-target="produtividade">📈 Produtividade</button>
+
+</div>
+
+<!-- SEÇÕES -->
+<section class="secao" id="tecnologia">
+    <h2>Tecnologia</h2>
+    <p>Uso de máquinas modernas no campo.</p>
+</section>
+
+<section class="secao" id="sustentabilidade">
+    <h2>Sustentabilidade</h2>
+    <p>Preservação dos recursos naturais.</p>
+</section>
+
+<section class="secao" id="produtividade">
+    <h2>Produtividade</h2>
+    <p>Aumento da produção agrícola com eficiência.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Agro Forte</p>
+</footer>
+
+<!-- ACESSIBILIDADE -->
+<div class="acessibilidade">
+
+    <button id="aumentarFonte">A+</button>
+    <button id="diminuirFonte">A-</button>
+    <button id="alternarTema">🌙 Modo</button>
+
+</div>
+
+<script>
+
+// SAIBA MAIS
+document.getElementById("btnSaibaMais").addEventListener("click", () => {
+    document.getElementById("mensagem").innerHTML =
+    "🌿 Agro Forte promove inovação no campo!";
+});
+
+// BOTÕES DE SEÇÃO
+document.querySelectorAll(".botao-secao").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.getElementById(btn.dataset.target)
+        .scrollIntoView({behavior:"smooth"});
+    });
+});
+
+// FONTE
+let tamanho = 100;
+
+document.getElementById("aumentarFonte").onclick = () => {
+    tamanho += 10;
+    document.body.style.fontSize = tamanho + "%";
+};
+
+document.getElementById("diminuirFonte").onclick = () => {
+    if(tamanho > 80){
+        tamanho -= 10;
+        document.body.style.fontSize = tamanho + "%";
+    }
+};
+
+// TEMA
+document.getElementById("alternarTema").onclick = () => {
+    document.body.classList.toggle("dark");
+};
+
+// =========================
+// 🔊 LEITURA DA PÁGINA
+// =========================
+
+document.getElementById("lerPagina").addEventListener("click", () => {
+
+    window.speechSynthesis.cancel();
+
+    const texto = document.body.innerText;
+
+    const fala = new SpeechSynthesisUtterance(texto);
+
+    fala.lang = "pt-BR";
+    fala.rate = 1;
+
+    window.speechSynthesis.speak(fala);
+});
+
+// =========================
+// ⏹ PARAR LEITURA
+// =========================
+
+document.getElementById("pararLeitura").addEventListener("click", () => {
+    window.speechSynthesis.cancel();
+});
+
+</script>
+
+</body>
+</html>
